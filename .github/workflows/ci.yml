@@ -28,7 +28,7 @@ jobs:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
 
-       #TASK 0 - Runs a MATLAB command using run-command action
+       # TASK 0 - Runs a MATLAB command using run-command action
        - name: Run MATLAB command
          uses: matlab-actions/run-command@v2
          with:
@@ -41,10 +41,10 @@ jobs:
            source-folder: source
 
       # TASK 2 - Run all tests in the repository using run-build action
-      # - name: Run all tests using buildtool
-      #   uses: matlab-actions/run-build@v2
-      #   with:
-      #     tasks: ??
+       - name: Run all tests using buildtool
+         uses: matlab-actions/run-build@v2
+         with:
+           tasks: tests
 
       # - name: Upload test results
       #   uses: actions/upload-artifact@v4
